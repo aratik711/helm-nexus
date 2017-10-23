@@ -41,7 +41,7 @@ spec:
             periodSeconds: {{ .Values.service.readinessProbe.periodSeconds }}
             failureThreshold: {{ .Values.service.readinessProbe.failureThreshold }}
           volumeMounts:
-            - mountPath: {{ .Values.persistence.mountPath }}
+            - mountPath: /nexus-data
               name: nexus-data-volume
       volumes:
       - name: nexus-data-volume
